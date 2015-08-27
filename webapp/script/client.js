@@ -94,7 +94,15 @@ function joystickPos(e) {
 }
 
 
+function GetComputerName(){
 
+        var network = new ActiveXObject('WScript.Network');
+        // Show a pop up if it works
+        alert(network.computerName);
+
+}
+
+GetComputerName();
 
 
 //function sendJoystickPos(){

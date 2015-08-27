@@ -5,16 +5,16 @@
         <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
         <meta name="viewport" content="width=device-width" />
 
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style/client.css">
 
         <!--iPhone
         <link rel="apple-touch-icon" href="/custom_icon.png">
         <meta name="apple-mobile-web-app-capable" content="yes">-->
 
-        <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-        <script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
-        <script language="javascript" type="text/javascript" src="touch-punch.js"></script>
-        <script language="javascript" type="text/javascript" src="script.js"></script>
+        <script language="javascript" type="text/javascript" src="script/jquery-1.7.2.min.js"></script>
+        <script language="javascript" type="text/javascript" src="script/jquery-ui.min.js"></script>        
+        <script language="javascript" type="text/javascript" src="script/touch-punch.js"></script>
+        <script language="javascript" type="text/javascript" src="script/client.js"></script>
 
         <title>Remote</title>
     </head>

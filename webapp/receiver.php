@@ -2,6 +2,14 @@
 	header('Content-Type: text/html; charset=utf-8'); // sorgt für die korrekte Kodierung
 	header('Cache-Control: must-revalidate, pre-check=0, no-store, no-cache, max-age=0, post-check=0'); // ist mal wieder wichtig wegen IE
 
+	if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+	    $ip = $_SERVER['HTTP_CLIENT_IP'];
+	} elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+	    $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+	} else {
+	    $ip = $_SERVER['REMOTE_ADDR'];
+	}
+
 	$keyClient = $_POST['key'];
 
 	$keyFile = "key.txt";
@@ -16,6 +24,7 @@
 
 	if ($keyClient == $keyServer) {
 		fwrite($fh,"keyValid=TRUE\n");
+		fwrite($fh,"ip=".$ip."\n");
 		fwrite($fh,"x=".strtoupper($_POST['x'])."\n");
 		fwrite($fh,"y=".strtoupper($_POST['y'])."\n");
 

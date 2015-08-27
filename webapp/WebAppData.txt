@@ -1,0 +1,6 @@
+key=hHopE5ASu29tIkcVayMvrTOXBPlRxL8szfWiKjqb3eN4F0ndQZ
+keyValid=TRUE
+ip=192.168.178.64
+x=0
+y=0
+date=2015-08-28 00:32:17

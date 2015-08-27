@@ -1,5 +1,0 @@
-key=wNnYo4cx3gTSl9MVkZmOWsA7LqhIUKJd5DPrpvjRbQtuHizGC0
-keyValid=TRUE
-x=-32
-y=43
-date=2015-08-27 11:57:00

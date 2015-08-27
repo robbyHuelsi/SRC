@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
 
-        <link rel="stylesheet" href="styleServer.css">
+        <link rel="stylesheet" href="style/server.css">
 
         <title>Leonie Server</title>
     </head>
@@ -33,7 +33,7 @@
 		fwrite($fh,$key);
 		fclose($fh);
 
-		$url = "http://".getHostByName(getHostName())."/joystick/client.php?key=".$key;
+		$url = "http://".getHostByName(getHostName())."/client.php?key=".$key;
 
 		// create a QR Code with this text and display it
 		QRcode::png($url, "urlQr.png", "L", 10, 10);
