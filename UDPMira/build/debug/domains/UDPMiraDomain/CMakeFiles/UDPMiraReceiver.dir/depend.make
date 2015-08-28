@@ -58,6 +58,7 @@ domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.o: 
 domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.o: /opt/MIRA/base/include/serialization/IsAtomicSerializable.h
 domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.o: /opt/MIRA/base/include/serialization/IsBitwiseSerializable.h
 domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.o: /opt/MIRA/base/include/serialization/IsCollection.h
+domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.o: /opt/MIRA/base/include/serialization/IsNotMetaSerializable.h
 domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.o: /opt/MIRA/base/include/serialization/IsObjectTrackable.h
 domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.o: /opt/MIRA/base/include/serialization/IsPointerOrSharedPointer.h
 domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.o: /opt/MIRA/base/include/serialization/IsTransparentSerializable.h

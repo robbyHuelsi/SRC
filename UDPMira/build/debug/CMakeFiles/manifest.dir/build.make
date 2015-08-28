@@ -34,14 +34,11 @@ RM = /usr/bin/cmake -E remove -f
 # Escaping for special characters.
 EQUALS = =
 
-# The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/bin/cmake-gui
-
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/leonie/UDPMira
+CMAKE_SOURCE_DIR = /home/leonie/MIRA-Projects/RemoteControl/UDPMira
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/leonie/UDPMira/build/debug
+CMAKE_BINARY_DIR = /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug
 
 # Utility rule file for manifest.
 
@@ -63,6 +60,6 @@ CMakeFiles/manifest.dir/clean:
 .PHONY : CMakeFiles/manifest.dir/clean
 
 CMakeFiles/manifest.dir/depend:
-	cd /home/leonie/UDPMira/build/debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/leonie/UDPMira /home/leonie/UDPMira /home/leonie/UDPMira/build/debug /home/leonie/UDPMira/build/debug /home/leonie/UDPMira/build/debug/CMakeFiles/manifest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/leonie/MIRA-Projects/RemoteControl/UDPMira /home/leonie/MIRA-Projects/RemoteControl/UDPMira /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/manifest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/manifest.dir/depend
 

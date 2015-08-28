@@ -34,14 +34,11 @@ RM = /usr/bin/cmake -E remove -f
 # Escaping for special characters.
 EQUALS = =
 
-# The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/bin/cmake-gui
-
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/leonie/UDPMira
+CMAKE_SOURCE_DIR = /home/leonie/MIRA-Projects/RemoteControl/UDPMira
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/leonie/UDPMira/build/debug
+CMAKE_BINARY_DIR = /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug
 
 # Include any dependencies generated for this target.
 include domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/depend.make
@@ -54,17 +51,17 @@ include domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/flags.make
 
 domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.o: domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/flags.make
 domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.o: ../../domains/UDPMiraDomain/src/UDPMiraReceiver.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/leonie/UDPMira/build/debug/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.o"
-	cd /home/leonie/UDPMira/build/debug/domains/UDPMiraDomain && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.o -c /home/leonie/UDPMira/domains/UDPMiraDomain/src/UDPMiraReceiver.cpp
+	cd /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/domains/UDPMiraDomain && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.o -c /home/leonie/MIRA-Projects/RemoteControl/UDPMira/domains/UDPMiraDomain/src/UDPMiraReceiver.cpp
 
 domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.i"
-	cd /home/leonie/UDPMira/build/debug/domains/UDPMiraDomain && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/leonie/UDPMira/domains/UDPMiraDomain/src/UDPMiraReceiver.cpp > CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.i
+	cd /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/domains/UDPMiraDomain && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/leonie/MIRA-Projects/RemoteControl/UDPMira/domains/UDPMiraDomain/src/UDPMiraReceiver.cpp > CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.i
 
 domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.s"
-	cd /home/leonie/UDPMira/build/debug/domains/UDPMiraDomain && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/leonie/UDPMira/domains/UDPMiraDomain/src/UDPMiraReceiver.cpp -o CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.s
+	cd /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/domains/UDPMiraDomain && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/leonie/MIRA-Projects/RemoteControl/UDPMira/domains/UDPMiraDomain/src/UDPMiraReceiver.cpp -o CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.s
 
 domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.o.requires:
 .PHONY : domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.o.requires
@@ -77,17 +74,17 @@ domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.o.p
 
 domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/udpclient.cpp.o: domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/flags.make
 domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/udpclient.cpp.o: ../../domains/UDPMiraDomain/src/udpclient.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/leonie/UDPMira/build/debug/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/udpclient.cpp.o"
-	cd /home/leonie/UDPMira/build/debug/domains/UDPMiraDomain && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/UDPMiraReceiver.dir/src/udpclient.cpp.o -c /home/leonie/UDPMira/domains/UDPMiraDomain/src/udpclient.cpp
+	cd /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/domains/UDPMiraDomain && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/UDPMiraReceiver.dir/src/udpclient.cpp.o -c /home/leonie/MIRA-Projects/RemoteControl/UDPMira/domains/UDPMiraDomain/src/udpclient.cpp
 
 domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/udpclient.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/UDPMiraReceiver.dir/src/udpclient.cpp.i"
-	cd /home/leonie/UDPMira/build/debug/domains/UDPMiraDomain && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/leonie/UDPMira/domains/UDPMiraDomain/src/udpclient.cpp > CMakeFiles/UDPMiraReceiver.dir/src/udpclient.cpp.i
+	cd /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/domains/UDPMiraDomain && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/leonie/MIRA-Projects/RemoteControl/UDPMira/domains/UDPMiraDomain/src/udpclient.cpp > CMakeFiles/UDPMiraReceiver.dir/src/udpclient.cpp.i
 
 domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/udpclient.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UDPMiraReceiver.dir/src/udpclient.cpp.s"
-	cd /home/leonie/UDPMira/build/debug/domains/UDPMiraDomain && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/leonie/UDPMira/domains/UDPMiraDomain/src/udpclient.cpp -o CMakeFiles/UDPMiraReceiver.dir/src/udpclient.cpp.s
+	cd /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/domains/UDPMiraDomain && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/leonie/MIRA-Projects/RemoteControl/UDPMira/domains/UDPMiraDomain/src/udpclient.cpp -o CMakeFiles/UDPMiraReceiver.dir/src/udpclient.cpp.s
 
 domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/udpclient.cpp.o.requires:
 .PHONY : domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/udpclient.cpp.o.requires
@@ -116,7 +113,7 @@ domains/UDPMiraDomain/libUDPMiraReceiver.so: /usr/lib/x86_64-linux-gnu/libboost_
 domains/UDPMiraDomain/libUDPMiraReceiver.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
 domains/UDPMiraDomain/libUDPMiraReceiver.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
 domains/UDPMiraDomain/libUDPMiraReceiver.so: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
-domains/UDPMiraDomain/libUDPMiraReceiver.so: /usr/local/lib/libopencv_core.so.2.4.10
+domains/UDPMiraDomain/libUDPMiraReceiver.so: /usr/local/lib/libopencv_core.so.2.4.11
 domains/UDPMiraDomain/libUDPMiraReceiver.so: /usr/lib/x86_64-linux-gnu/libiberty.a
 domains/UDPMiraDomain/libUDPMiraReceiver.so: /usr/lib/libbfd.so
 domains/UDPMiraDomain/libUDPMiraReceiver.so: /usr/lib/x86_64-linux-gnu/libiberty.a
@@ -131,8 +128,8 @@ domains/UDPMiraDomain/libUDPMiraReceiver.so: /usr/lib/x86_64-linux-gnu/libiberty
 domains/UDPMiraDomain/libUDPMiraReceiver.so: /usr/lib/libbfd.so
 domains/UDPMiraDomain/libUDPMiraReceiver.so: domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX shared library libUDPMiraReceiver.so"
-	cd /home/leonie/UDPMira/build/debug/domains/UDPMiraDomain && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/UDPMiraReceiver.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/leonie/UDPMira/build/debug/domains/UDPMiraDomain && /opt/MIRA/bin/ManifestGen -P MIRABase MIRAFramework /usr/lib/x86_64-linux-gnu/libboost_date_time.so /usr/lib/x86_64-linux-gnu/libboost_thread.so /usr/lib/x86_64-linux-gnu/libboost_system.so /usr/lib/x86_64-linux-gnu/libboost_filesystem.so /usr/lib/x86_64-linux-gnu/libboost_regex.so /usr/lib/x86_64-linux-gnu/libboost_program_options.so /usr/lib/x86_64-linux-gnu/libboost_iostreams.so xml2 ssl crypto z pthread opencv_core sqlite3 /usr/lib/x86_64-linux-gnu/libiberty.a /usr/lib/libbfd.so /usr/lib/x86_64-linux-gnu/libiberty.a dl MIRABase -L UDPMiraReceiver -T /home/leonie/UDPMira/build/debug/domains/UDPMiraDomain/UDPMiraReceiver.manifest -D /home/leonie/UDPMira/build/debug/domains/UDPMiraDomain/UDPMiraReceiver -S -F
+	cd /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/domains/UDPMiraDomain && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/UDPMiraReceiver.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/domains/UDPMiraDomain && /opt/MIRA/bin/ManifestGen -P MIRABase MIRAFramework /usr/lib/x86_64-linux-gnu/libboost_date_time.so /usr/lib/x86_64-linux-gnu/libboost_thread.so /usr/lib/x86_64-linux-gnu/libboost_system.so /usr/lib/x86_64-linux-gnu/libboost_filesystem.so /usr/lib/x86_64-linux-gnu/libboost_regex.so /usr/lib/x86_64-linux-gnu/libboost_program_options.so /usr/lib/x86_64-linux-gnu/libboost_iostreams.so xml2 ssl crypto z pthread opencv_core sqlite3 /usr/lib/x86_64-linux-gnu/libiberty.a /usr/lib/libbfd.so /usr/lib/x86_64-linux-gnu/libiberty.a dl MIRABase -L UDPMiraReceiver -T /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/domains/UDPMiraDomain/UDPMiraReceiver.manifest -D /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/domains/UDPMiraDomain/UDPMiraReceiver -S -F
 
 # Rule to build all files generated by this target.
 domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/build: domains/UDPMiraDomain/libUDPMiraReceiver.so
@@ -143,10 +140,10 @@ domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/requires: domains/UDPMiraDo
 .PHONY : domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/requires
 
 domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/clean:
-	cd /home/leonie/UDPMira/build/debug/domains/UDPMiraDomain && $(CMAKE_COMMAND) -P CMakeFiles/UDPMiraReceiver.dir/cmake_clean.cmake
+	cd /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/domains/UDPMiraDomain && $(CMAKE_COMMAND) -P CMakeFiles/UDPMiraReceiver.dir/cmake_clean.cmake
 .PHONY : domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/clean
 
 domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/depend:
-	cd /home/leonie/UDPMira/build/debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/leonie/UDPMira /home/leonie/UDPMira/domains/UDPMiraDomain /home/leonie/UDPMira/build/debug /home/leonie/UDPMira/build/debug/domains/UDPMiraDomain /home/leonie/UDPMira/build/debug/domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/leonie/MIRA-Projects/RemoteControl/UDPMira /home/leonie/MIRA-Projects/RemoteControl/UDPMira/domains/UDPMiraDomain /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/domains/UDPMiraDomain /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/depend
 

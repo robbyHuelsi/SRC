@@ -112,7 +112,7 @@ void UDPMiraReceiver::initialize()
 	// TODO: subscribe and publish all required channels
 	//subscribe<Pose2>("Pose", &UnitName::onPoseChanged);
 	//mChannel = publish<Img<>>("Image");
-	server = new udp_server("134.103.120.168", 8888);
+	server = new udp_server("134.103.107.164", 8888);
 }
 
 void UDPMiraReceiver::process(const Timer& timer)
@@ -159,7 +159,7 @@ void UDPMiraReceiver::process(const Timer& timer)
 	cout << "x: " << dX << ";" << endl;
 	cout << "y: " << dY << ";" << endl;
 
-	vel = {dX, 0, dY};	
+	vel = {dY, 0, -dX};	
 
 	callService<void>("robot/Robot", "setVelocity", vel);
 }

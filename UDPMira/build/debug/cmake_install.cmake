@@ -1,4 +1,4 @@
-# Install script for directory: /home/leonie/UDPMira
+# Install script for directory: /home/leonie/MIRA-Projects/RemoteControl/UDPMira
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -32,18 +32,10 @@ IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   SET(CMAKE_INSTALL_SO_NO_EXE "1")
 ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
-IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "external")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/external/eigen/eigen" TYPE DIRECTORY FILES "/opt/MIRA/external/eigen/eigen/Eigen" FILES_MATCHING REGEX "/[^/]*$")
-ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "external")
-
-IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "external")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/external/json" TYPE DIRECTORY FILES "/opt/MIRA/external/json/json" FILES_MATCHING REGEX "/[^/]*$" REGEX "/Makefile$" EXCLUDE REGEX "/CMakeFiles$" EXCLUDE REGEX "/CMakeCache\\.txt$" EXCLUDE REGEX "/cmake\\_install\\.cmake$" EXCLUDE)
-ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "external")
-
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  INCLUDE("/home/leonie/UDPMira/build/debug/toolboxes/cmake_install.cmake")
-  INCLUDE("/home/leonie/UDPMira/build/debug/domains/cmake_install.cmake")
+  INCLUDE("/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/toolboxes/cmake_install.cmake")
+  INCLUDE("/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/domains/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 
@@ -53,7 +45,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/home/leonie/UDPMira/build/debug/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/home/leonie/UDPMira/build/debug/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)

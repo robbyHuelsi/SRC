@@ -16,11 +16,11 @@ netdb.h
 stdexcept
 -
 
-/home/leonie/UDPMira/domains/UDPMiraDomain/src/UDPMiraReceiver.cpp
+/home/leonie/MIRA-Projects/RemoteControl/UDPMira/domains/UDPMiraDomain/src/UDPMiraReceiver.cpp
 fw/Unit.h
 -
 udpclient.h
-/home/leonie/UDPMira/domains/UDPMiraDomain/src/udpclient.h
+/home/leonie/MIRA-Projects/RemoteControl/UDPMira/domains/UDPMiraDomain/src/udpclient.h
 string
 -
 sstream
@@ -564,6 +564,8 @@ cstddef
 
 /opt/MIRA/base/include/serialization/IsCollection.h
 
+/opt/MIRA/base/include/serialization/IsNotMetaSerializable.h
+
 /opt/MIRA/base/include/serialization/IsObjectTrackable.h
 type_traits
 -
@@ -608,6 +610,8 @@ utils/MakeString.h
 utils/IsDefaultConstructible.h
 -
 serialization/BinarySerializer.h
+-
+serialization/IsNotMetaSerializable.h
 -
 serialization/adapters/boost/optional.hpp
 -
@@ -836,6 +840,8 @@ serialization/SplitReflect.h
 serialization/IsTransparentSerializable.h
 -
 serialization/IsObjectTrackable.h
+-
+serialization/IsNotMetaSerializable.h
 -
 serialization/BinarySerializer.h
 -

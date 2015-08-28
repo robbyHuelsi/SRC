@@ -1,4 +1,4 @@
-# Install script for directory: /home/leonie/UDPMira/domains
+# Install script for directory: /home/leonie/MIRA-Projects/RemoteControl/UDPMira/domains
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  INCLUDE("/home/leonie/UDPMira/build/debug/domains/UDPMiraDomain/cmake_install.cmake")
+  INCLUDE("/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/domains/UDPMiraDomain/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 

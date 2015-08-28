@@ -4,8 +4,8 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/leonie/UDPMira/domains/UDPMiraDomain/src/UDPMiraReceiver.cpp" "/home/leonie/UDPMira/build/debug/domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.o"
-  "/home/leonie/UDPMira/domains/UDPMiraDomain/src/udpclient.cpp" "/home/leonie/UDPMira/build/debug/domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/udpclient.cpp.o"
+  "/home/leonie/MIRA-Projects/RemoteControl/UDPMira/domains/UDPMiraDomain/src/UDPMiraReceiver.cpp" "/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.o"
+  "/home/leonie/MIRA-Projects/RemoteControl/UDPMira/domains/UDPMiraDomain/src/udpclient.cpp" "/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/udpclient.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

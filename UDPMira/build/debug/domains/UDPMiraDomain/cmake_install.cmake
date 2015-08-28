@@ -1,4 +1,4 @@
-# Install script for directory: /home/leonie/UDPMira/domains/UDPMiraDomain
+# Install script for directory: /home/leonie/MIRA-Projects/RemoteControl/UDPMira/domains/UDPMiraDomain
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -38,68 +38,24 @@ RM = /usr/bin/cmake -E remove -f
 # Escaping for special characters.
 EQUALS = =
 
-# The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/bin/cmake-gui
-
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/leonie/UDPMira
+CMAKE_SOURCE_DIR = /home/leonie/MIRA-Projects/RemoteControl/UDPMira
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/leonie/UDPMira/build/debug
+CMAKE_BINARY_DIR = /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running interactive CMake command-line interface..."
+	/usr/bin/cmake -i .
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
 edit_cache/fast: edit_cache
 .PHONY : edit_cache/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-.PHONY : install/local/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-.PHONY : install/strip/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"external\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-.PHONY : list_install_components/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -123,14 +79,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/leonie/UDPMira/build/debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/leonie/UDPMira/build/debug/CMakeFiles /home/leonie/UDPMira/build/debug/domains/UDPMiraDomain/CMakeFiles/progress.marks
-	cd /home/leonie/UDPMira/build/debug && $(MAKE) -f CMakeFiles/Makefile2 domains/UDPMiraDomain/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/leonie/UDPMira/build/debug/CMakeFiles 0
+	cd /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/domains/UDPMiraDomain/CMakeFiles/progress.marks
+	cd /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug && $(MAKE) -f CMakeFiles/Makefile2 domains/UDPMiraDomain/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/leonie/UDPMira/build/debug && $(MAKE) -f CMakeFiles/Makefile2 domains/UDPMiraDomain/clean
+	cd /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug && $(MAKE) -f CMakeFiles/Makefile2 domains/UDPMiraDomain/clean
 .PHONY : clean
 
 # The main clean target
@@ -139,22 +95,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/leonie/UDPMira/build/debug && $(MAKE) -f CMakeFiles/Makefile2 domains/UDPMiraDomain/preinstall
+	cd /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug && $(MAKE) -f CMakeFiles/Makefile2 domains/UDPMiraDomain/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/leonie/UDPMira/build/debug && $(MAKE) -f CMakeFiles/Makefile2 domains/UDPMiraDomain/preinstall
+	cd /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug && $(MAKE) -f CMakeFiles/Makefile2 domains/UDPMiraDomain/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/leonie/UDPMira/build/debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/rule:
-	cd /home/leonie/UDPMira/build/debug && $(MAKE) -f CMakeFiles/Makefile2 domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/rule
+	cd /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug && $(MAKE) -f CMakeFiles/Makefile2 domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/rule
 .PHONY : domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/rule
 
 # Convenience name for target.
@@ -163,12 +119,12 @@ UDPMiraReceiver: domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/rule
 
 # fast build rule for target.
 UDPMiraReceiver/fast:
-	cd /home/leonie/UDPMira/build/debug && $(MAKE) -f domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/build.make domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/build
+	cd /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug && $(MAKE) -f domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/build.make domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/build
 .PHONY : UDPMiraReceiver/fast
 
 # Convenience name for target.
 domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver_dist.dir/rule:
-	cd /home/leonie/UDPMira/build/debug && $(MAKE) -f CMakeFiles/Makefile2 domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver_dist.dir/rule
+	cd /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug && $(MAKE) -f CMakeFiles/Makefile2 domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver_dist.dir/rule
 .PHONY : domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver_dist.dir/rule
 
 # Convenience name for target.
@@ -177,29 +133,15 @@ UDPMiraReceiver_dist: domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver_dist.dir/
 
 # fast build rule for target.
 UDPMiraReceiver_dist/fast:
-	cd /home/leonie/UDPMira/build/debug && $(MAKE) -f domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver_dist.dir/build.make domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver_dist.dir/build
+	cd /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug && $(MAKE) -f domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver_dist.dir/build.make domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver_dist.dir/build
 .PHONY : UDPMiraReceiver_dist/fast
-
-# Convenience name for target.
-domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver_manifest.dir/rule:
-	cd /home/leonie/UDPMira/build/debug && $(MAKE) -f CMakeFiles/Makefile2 domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver_manifest.dir/rule
-.PHONY : domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver_manifest.dir/rule
-
-# Convenience name for target.
-UDPMiraReceiver_manifest: domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver_manifest.dir/rule
-.PHONY : UDPMiraReceiver_manifest
-
-# fast build rule for target.
-UDPMiraReceiver_manifest/fast:
-	cd /home/leonie/UDPMira/build/debug && $(MAKE) -f domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver_manifest.dir/build.make domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver_manifest.dir/build
-.PHONY : UDPMiraReceiver_manifest/fast
 
 src/UDPMiraReceiver.o: src/UDPMiraReceiver.cpp.o
 .PHONY : src/UDPMiraReceiver.o
 
 # target to build an object file
 src/UDPMiraReceiver.cpp.o:
-	cd /home/leonie/UDPMira/build/debug && $(MAKE) -f domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/build.make domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.o
+	cd /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug && $(MAKE) -f domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/build.make domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.o
 .PHONY : src/UDPMiraReceiver.cpp.o
 
 src/UDPMiraReceiver.i: src/UDPMiraReceiver.cpp.i
@@ -207,7 +149,7 @@ src/UDPMiraReceiver.i: src/UDPMiraReceiver.cpp.i
 
 # target to preprocess a source file
 src/UDPMiraReceiver.cpp.i:
-	cd /home/leonie/UDPMira/build/debug && $(MAKE) -f domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/build.make domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.i
+	cd /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug && $(MAKE) -f domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/build.make domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.i
 .PHONY : src/UDPMiraReceiver.cpp.i
 
 src/UDPMiraReceiver.s: src/UDPMiraReceiver.cpp.s
@@ -215,7 +157,7 @@ src/UDPMiraReceiver.s: src/UDPMiraReceiver.cpp.s
 
 # target to generate assembly for a file
 src/UDPMiraReceiver.cpp.s:
-	cd /home/leonie/UDPMira/build/debug && $(MAKE) -f domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/build.make domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.s
+	cd /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug && $(MAKE) -f domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/build.make domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/UDPMiraReceiver.cpp.s
 .PHONY : src/UDPMiraReceiver.cpp.s
 
 src/udpclient.o: src/udpclient.cpp.o
@@ -223,7 +165,7 @@ src/udpclient.o: src/udpclient.cpp.o
 
 # target to build an object file
 src/udpclient.cpp.o:
-	cd /home/leonie/UDPMira/build/debug && $(MAKE) -f domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/build.make domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/udpclient.cpp.o
+	cd /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug && $(MAKE) -f domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/build.make domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/udpclient.cpp.o
 .PHONY : src/udpclient.cpp.o
 
 src/udpclient.i: src/udpclient.cpp.i
@@ -231,7 +173,7 @@ src/udpclient.i: src/udpclient.cpp.i
 
 # target to preprocess a source file
 src/udpclient.cpp.i:
-	cd /home/leonie/UDPMira/build/debug && $(MAKE) -f domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/build.make domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/udpclient.cpp.i
+	cd /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug && $(MAKE) -f domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/build.make domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/udpclient.cpp.i
 .PHONY : src/udpclient.cpp.i
 
 src/udpclient.s: src/udpclient.cpp.s
@@ -239,7 +181,7 @@ src/udpclient.s: src/udpclient.cpp.s
 
 # target to generate assembly for a file
 src/udpclient.cpp.s:
-	cd /home/leonie/UDPMira/build/debug && $(MAKE) -f domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/build.make domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/udpclient.cpp.s
+	cd /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug && $(MAKE) -f domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/build.make domains/UDPMiraDomain/CMakeFiles/UDPMiraReceiver.dir/src/udpclient.cpp.s
 .PHONY : src/udpclient.cpp.s
 
 # Help Target
@@ -250,12 +192,7 @@ help:
 	@echo "... depend"
 	@echo "... UDPMiraReceiver"
 	@echo "... UDPMiraReceiver_dist"
-	@echo "... UDPMiraReceiver_manifest"
 	@echo "... edit_cache"
-	@echo "... install"
-	@echo "... install/local"
-	@echo "... install/strip"
-	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... src/UDPMiraReceiver.o"
@@ -275,6 +212,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/leonie/UDPMira/build/debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
