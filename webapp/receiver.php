@@ -28,7 +28,7 @@
 		fwrite($fh,"x=".strtoupper($_POST['x'])."\n");
 		fwrite($fh,"y=".strtoupper($_POST['y'])."\n");
 
-		udp();
+		udp("x=".strtoupper($_POST['x'])." y=".strtoupper($_POST['y'])."\0");
 		
 		echo date('H:i:s');
 
@@ -44,12 +44,11 @@
 	fclose($fh);
 
 
-	function udp (){
+	function udp ($msg){
 		$sock = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP);
 
-	    $msg = "Ping !";
 	    $len = strlen($msg);
 
-	    socket_sendto($sock, $msg, $len, 0, '127.0.0.1', 1223);
+	    socket_sendto($sock, $msg, $len, 0, '134.103.107.164', 8888); //Leonie: 192.168.1.26
 	    socket_close($sock);
 	}

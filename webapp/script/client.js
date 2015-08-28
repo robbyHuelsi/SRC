@@ -1,3 +1,5 @@
+var lastReqTime = Date.now();
+
 $(function() {
     $( "#joystick" ).draggable({
     	containment: "parent",
@@ -110,34 +112,40 @@ var request = false;
 
 // Request senden
 function setRequest(MouseX, MouseY) {
-	// Request erzeugen
-	if (window.XMLHttpRequest) {
-		request = new XMLHttpRequest(); // Mozilla, Safari, Opera
-	} else if (window.ActiveXObject) {
-		try {
-			request = new ActiveXObject('Msxml2.XMLHTTP'); // IE 5
-		} catch (e) {
-			try {
-				request = new ActiveXObject('Microsoft.XMLHTTP'); // IE 6
-			} catch (e) {}
-		}
-	}
 
-	// überprüfen, ob Request erzeugt wurde
-	if (!request) {
-		alert("Kann keine XMLHTTP-Instanz erzeugen");
-		return false;
-	} else {
-		var url = "receiver.php";
-		// Request öffnen
-		request.open('post', url, true);
-		// Requestheader senden
-		request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-		// Request senden
-		request.send('key='+document.getElementById("verificationKey").value+'&x='+MouseX+'&y='+MouseY);
-		// Request auswerten
-		request.onreadystatechange = interpretRequest;
-	}
+	if (MouseX == 0 || MouseY == 0 || (Date.now() - lastReqTime > 500)) {
+
+		// Request erzeugen
+		if (window.XMLHttpRequest) {
+			request = new XMLHttpRequest(); // Mozilla, Safari, Opera
+		} else if (window.ActiveXObject) {
+			try {
+				request = new ActiveXObject('Msxml2.XMLHTTP'); // IE 5
+			} catch (e) {
+				try {
+					request = new ActiveXObject('Microsoft.XMLHTTP'); // IE 6
+				} catch (e) {}
+			}
+		}
+
+		// überprüfen, ob Request erzeugt wurde
+		if (!request) {
+			alert("Kann keine XMLHTTP-Instanz erzeugen");
+			return false;
+		} else {
+			var url = "receiver.php";
+			// Request öffnen
+			request.open('post', url, true);
+			// Requestheader senden
+			request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+			// Request senden
+			request.send('key='+document.getElementById("verificationKey").value+'&x='+MouseX+'&y='+MouseY);
+			// Request auswerten
+			request.onreadystatechange = interpretRequest;
+		}
+
+		lastReqTime = Date.now();
+	};
 }
 
 // Request auswerten
