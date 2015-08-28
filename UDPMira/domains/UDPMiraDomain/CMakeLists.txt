@@ -1,0 +1,30 @@
+
+MIRA_REQUIRE_PACKAGE(UDPMiraDomain)
+
+###############################################################################
+
+MIRA_ADD_DOCUMENTATION(UDPMiraDomain
+	DIRS
+		doc
+		include
+	DEPENDS
+		#RobotDataTypes
+)
+
+###############################################################################
+
+INCLUDE_DIRECTORIES(${CMAKE_CURRENT_LIST_DIR}/include)
+
+###############################################################################
+
+MIRA_ADD_LIBRARY(UDPMiraReceiver
+	SHARED
+	#PACKAGE $PACKAGE$
+	SOURCE
+		src/UDPMiraReceiver.cpp
+		src/udpclient.cpp
+
+	LINK_LIBS
+		MIRABase
+		MIRAFramework
+)

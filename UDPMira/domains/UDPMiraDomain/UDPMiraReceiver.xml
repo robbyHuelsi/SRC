@@ -1,0 +1,3 @@
+<root>
+	<unit class="udpmiradomain::UDPMiraReceiver" id="UDPMiraReceiver"/>
+</root>
