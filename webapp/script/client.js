@@ -1,4 +1,25 @@
-var lastReqTime = Date.now();
+var posX100 = 0;
+var posY100 = 0;
+
+var repeatTime = 2000;
+var repeat = true;
+
+var reqAnswer = false;
+
+var lastRequest;
+
+var verificationKey, scitosName, port, path;
+
+var notiCount = 0;
+
+function loadClient(getKey, getScitosName, getPort, getPath){
+	verificationKey = getKey;
+	scitosName = getScitosName;
+	port = getPort;
+	path = getPath;
+	//alert(GetComputerName());
+	repeatRequest();
+};
 
 $(function() {
     $( "#joystick" ).draggable({
@@ -15,29 +36,33 @@ $(function() {
     });
 });
 
-/*object.onload=function(){
-    setRequest(0, 0);
-};*/
+function getComputerName(){
+
+        //var network = new ActiveXObject('WScript.Network');
+        // Show a pop up if it works
+        //return network.computerName;
+        return "computerName";
+}
 
 function joystickChange(posX, posY){
-
 	if (posX == 0 && posY == 0) {
+		posX100 = 0;
+		posY100 = 0;
+
 		document.getElementById("infoMouseX").value = 0;
     	document.getElementById("infoMouseY").value = 0;
     	document.getElementById("joystick").style.left = "";
     	document.getElementById("joystick").style.top = "";
 
-    	setRequest(0, 0);
+    	setRequest("CONTROL", 0, 0);
     }else{
-    	var posX100, posY100;
-
-		posX100 = Math.round((posX - $(joystickWrapper).offset().left - 2 - $(joystickWrapper).width()/2 +25) / ($(joystickWrapper).width()/2 - 25) * 100);
+    	posX100 = Math.round((posX - $(joystickWrapper).offset().left - 2 - $(joystickWrapper).width()/2 +25) / ($(joystickWrapper).width()/2 - 25) * 100);
 		posY100 = Math.round(-(posY - $(joystickWrapper).offset().top - 2 - $(joystickWrapper).height()/2 + 25) / ($(joystickWrapper).height()/2 - 25) * 100);
 
     	document.getElementById("infoMouseX").value = (posX100);
     	document.getElementById("infoMouseY").value = (posY100);
 
-    	setRequest(posX100, posY100);
+    	setRequest("CONTROL",posX100, posY100);
     };
 };
 
@@ -96,56 +121,50 @@ function joystickPos(e) {
 }
 
 
-function GetComputerName(){
-
-        var network = new ActiveXObject('WScript.Network');
-        // Show a pop up if it works
-        alert(network.computerName);
-
+function repeatRequest(){
+	if (repeat) {
+		setRequest((reqAnswer ? reqAnswer.status.detail : "FALSE"), posX100, posY100);
+		setTimeout(function() {
+			repeatRequest();
+		}, (repeatTime > 0 ? repeatTime : 100));
+	};
 }
 
-GetComputerName();
 
-
-//function sendJoystickPos(){
 var request = false;
 
 // Request senden
-function setRequest(MouseX, MouseY) {
+function setRequest(status, MouseX, MouseY) {
+	lastRequest = Date.now();
 
-	if (MouseX == 0 || MouseY == 0 || (Date.now() - lastReqTime > 500)) {
-
-		// Request erzeugen
-		if (window.XMLHttpRequest) {
-			request = new XMLHttpRequest(); // Mozilla, Safari, Opera
-		} else if (window.ActiveXObject) {
+	// Request erzeugen
+	if (window.XMLHttpRequest) {
+		request = new XMLHttpRequest(); // Mozilla, Safari, Opera
+	} else if (window.ActiveXObject) {
+		try {
+			request = new ActiveXObject('Msxml2.XMLHTTP'); // IE 5
+		} catch (e) {
 			try {
-				request = new ActiveXObject('Msxml2.XMLHTTP'); // IE 5
-			} catch (e) {
-				try {
-					request = new ActiveXObject('Microsoft.XMLHTTP'); // IE 6
-				} catch (e) {}
-			}
+				request = new ActiveXObject('Microsoft.XMLHTTP'); // IE 6
+			} catch (e) {}
 		}
+	}
 
-		// überprüfen, ob Request erzeugt wurde
-		if (!request) {
-			alert("Kann keine XMLHTTP-Instanz erzeugen");
-			return false;
-		} else {
-			var url = "receiver.php";
-			// Request öffnen
-			request.open('post', url, true);
-			// Requestheader senden
-			request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-			// Request senden
-			request.send('key='+document.getElementById("verificationKey").value+'&x='+MouseX+'&y='+MouseY);
-			// Request auswerten
-			request.onreadystatechange = interpretRequest;
-		}
-
-		lastReqTime = Date.now();
-	};
+	// überprüfen, ob Request erzeugt wurde
+	if (!request) {
+		notification("Kann keine XMLHTTP-Instanz erzeugen","","warning");
+		return false;
+	} else {
+		var url = "sci.php";
+		// Request öffnen
+		request.open('post', url, true);
+		// Requestheader senden
+		request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+		// Request senden
+		request.send('key='+verificationKey+'&time='+lastRequest+'&port='+port+'&path='+path+'&name='+getComputerName()+'&status='+status+'&x='+MouseX+'&y='+MouseY);
+		// Request auswerten
+		request.onreadystatechange = interpretRequest;
+	}
 }
 
 // Request auswerten
@@ -154,22 +173,104 @@ function interpretRequest() {
 		// wenn der readyState 4 und der request.status 200 ist, dann ist alles korrekt gelaufen
 		case 4:
 			if (request.status != 200) {
-				alert("Der Request wurde abgeschlossen, ist aber nicht OK\nFehler:"+request.status);
+				notification("Der Request wurde abgeschlossen, ist aber nicht OK", "Fehler-Code: "+request.status, "warning");
+				repeatTime = 3000;
 			} else {
-				var content = request.responseText;
-				// den Inhalt des Requests in das <div> schreiben
-				if (content == "FALSE") {
+				var xmlDoc = request.responseXML;
+				//console.log(request.responseText);
+				reqAnswer = {
+					status : {
+						access : (xmlDoc.getElementsByTagName("status")[0].getElementsByTagName("access")[0].firstChild ? xmlDoc.getElementsByTagName("status")[0].getElementsByTagName("access")[0].firstChild.nodeValue : ""),
+						detail : (xmlDoc.getElementsByTagName("status")[0].getElementsByTagName("detail")[0].firstChild ? xmlDoc.getElementsByTagName("status")[0].getElementsByTagName("detail")[0].firstChild.nodeValue : "")
+					},
+					time : (xmlDoc.getElementsByTagName("time")[0].firstChild ? xmlDoc.getElementsByTagName("time")[0].firstChild.nodeValue : ""),
+					queue : {
+						position : (xmlDoc.getElementsByTagName("queue")[0].getElementsByTagName("position")[0].firstChild ? xmlDoc.getElementsByTagName("queue")[0].getElementsByTagName("position")[0].firstChild.nodeValue : ""),
+						length : (xmlDoc.getElementsByTagName("queue")[0].getElementsByTagName("length")[0].firstChild ? xmlDoc.getElementsByTagName("queue")[0].getElementsByTagName("length")[0].firstChild.nodeValue : "")
+					},
+					scitosNote : (xmlDoc.getElementsByTagName("scitosNote")[0].firstChild ? xmlDoc.getElementsByTagName("scitosNote")[0].firstChild.nodeValue : "")
+				};
+
+				if (reqAnswer.status.access == 0) {
 					document.getElementById("wrapper").style.display =  "none";
-					document.getElementById("KeyInvalidMessage").style.display =  "block";
+					//document.getElementById("wrapper").innerHTML =  "";
+					document.getElementById("invalidMessage").style.display =  "block";
+
+					if (reqAnswer.status.detail == "NOIP") {
+						document.getElementById("invalidMessage").innerHTML = "<h1>Your IP address can't detected!</h1><p>Use another browser.</p>";
+						repeat = false;
+
+					}else if (reqAnswer.status.detail == "NOKEY") {
+						document.getElementById("invalidMessage").innerHTML = "<h1>No key!</h1><p>Scan QR code on the screen of " + scitosName + " with your mobile device to become access!</p>";
+						repeat = false;
+
+					}else if (reqAnswer.status.detail == "KEYNOTFOUND") {
+						document.getElementById("invalidMessage").innerHTML = "<h1>Your key is incorrect!</h1><p>Scan QR code on the screen of " + scitosName + " with your mobile device to become access!</p>";
+						repeat = false;
+
+					}else if (reqAnswer.status.detail == "WRONGKEY") {
+						document.getElementById("invalidMessage").innerHTML = "<h1>Another device use this key!</h1><p>Scan QR code on the screen of " + scitosName + " with your mobile device to become access!</p>";
+						repeat = false;
+
+					}else if (reqAnswer.status.detail == "ABORT") {
+						document.getElementById("invalidMessage").innerHTML = "<h1>Bye!</h1><p>If you want to control " + scitosName +" again, scan the QR code!</p>";
+						repeat = false;
+
+					}else if (reqAnswer.status.detail == "QUEUE") {
+						if (reqAnswer.queue.position == 1) {
+							document.getElementById("invalidMessage").innerHTML = "<h1>Wait your turn!</h1><p>You are next.</p><p>Last check: " + reqAnswer.time + "</p>";
+						}else{
+							document.getElementById("invalidMessage").innerHTML = "<h1>Wait your turn!</h1><p>Your position is Number " + (+reqAnswer.queue.position + 1) + " of " + reqAnswer.queue.length + ".</p><p>Last check: " + reqAnswer.time + "</p>";
+						};
+						repeatTime = 5000 * +reqAnswer.queue.position;
+					};
+				
+
 				}else{
 					document.getElementById("wrapper").style.display =  "block";
-					document.getElementById("infoAjaxRequest").value =  content;
+					document.getElementById("invalidMessage").style.display =  "none";
+					document.getElementById("infoAjaxRequest").value =  reqAnswer.time;
+					document.getElementById("infoAjaxDur").value =  (Date.now() - lastRequest) + " ms";
+
+					if (reqAnswer.status.detail == "IPEXISTS") {
+						notification("Welcome back!", "You come back with a new key.", "welcome");
+
+					}else if (reqAnswer.status.detail == "NEW") {
+						notification("Welcome!", "Control " + scitosName + " with your smartphone:", "welcome");
+
+					}else if (reqAnswer.status.detail == "WAITEND"){
+						notification("It's your turn!!", "Now you can control " + scitosName + ":", "control");
+					};
+
+					repeatTime = 500;
+
 				};
-				
+
+				//console.log(reqAnswer);
 			}
 			break;
 		default:
 			break;
 	}
 }
-//}
+
+window.onbeforeunload = function (event) {
+	abortClient();
+
+    /*var message = 'Please wait while disconnect from ' + scitosName + ' or click \'abort\'.';
+    if (typeof event == 'undefined') {
+        event = window.event;
+    }
+    if (event) {
+        event.returnValue = message;
+    }
+
+    return message;*/
+};
+
+//window.onbeforeunload = abortClient();
+
+function abortClient(){
+	repeat = false;
+	setRequest("ABORT",0,0);
+}

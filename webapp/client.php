@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="de">
+<?php
+    $settingsFile = "settings.txt";
+    $sfh = fopen($settingsFile, 'r');
+    if ($sfh) {
+        while (($buffer = fgets($sfh, 4096)) !== false) {
+            list($settingN[], $settingV[]) = split('[=;]', $buffer);
+        }
+        if (!feof($sfh)) {
+            echo "Fehler!";
+        }
+        fclose($sfh);
+    }
+
+    $key = 0;
+    if (!empty($_GET['key'])) {
+        $key = $_GET['key'];
+    }
+?>
     <head>
         <meta charset="utf-8">
-        <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;' name='viewport' />
         <meta name="viewport" content="width=device-width" />
 
         <link rel="stylesheet" href="style/client.css">
+        <link rel="stylesheet" href="style/notification.css">
+        <link rel="stylesheet" href="font-awesome-4-4-0/css/font-awesome.min.css">
 
         <!--iPhone
         <link rel="apple-touch-icon" href="/custom_icon.png">
@@ -15,34 +35,33 @@
         <script language="javascript" type="text/javascript" src="script/jquery-ui.min.js"></script>        
         <script language="javascript" type="text/javascript" src="script/touch-punch.js"></script>
         <script language="javascript" type="text/javascript" src="script/client.js"></script>
+        <script language="javascript" type="text/javascript" src="script/notification.js"></script>
 
-        <title>Remote</title>
+        <title><?php echo $settingV[array_search('scitosName', $settingN)]; ?> Remote Control</title>
     </head>
 
-    <body>
+    <body onload="loadClient('<?php echo $key; ?>', '<?php echo $settingV[array_search('scitosName', $settingN)]; ?>', '<?php echo $settingV[array_search('port', $settingN)]; ?>', '<?php echo $settingV[array_search('path', $settingN)]; ?>');">
         
             <?php
-                $key = 0;
-                if (!empty($_GET['key'])) {
-                    $key = $_GET['key'];
-                }
-
                 if ($key) {
                    ?>
                    <div id="wrapper">
+                        <h1><?php echo $settingV[array_search('scitosName', $settingN)]; ?> Remote Control</h1>
                         <table id="info">
                             <tr>
-                                <td style="display: none;">Verification Key:</td>
-                                <td style="display: none;"><input type="text" id="verificationKey" size="10" value="<?php echo $key; ?>"></td>
-                                <td style="display: none;"></td>
-                                <td>X:</td>
+                                <td class="tdRight">X:</td>
                                 <td><input type="text" id="infoMouseX" size="3" disabled="disabled"></td>
                                 <td></td>
-                                <td>Y:</td>
+                                <td class="tdRight">Y:</td>
                                 <td><input type="text" id="infoMouseY" size="3" disabled="disabled"></td>
                                 <td></td>
-                                <td>Last request:</td>
+                                <td class="tdRight">Last request:</td>
                                 <td><input type="text" id="infoAjaxRequest" size="10" disabled="disabled"></td>
+                                <td></td>
+                                <td class="tdRight">Duration:</td>
+                                <td><input type="text" id="infoAjaxDur" size="5" disabled="disabled"></td>
+                                <td></td>
+                                <td><input type="button" value="Abort" id="abort" onclick="abortClient();"></td>
                             </tr>
                             <tr>
                         </table> 
@@ -54,8 +73,8 @@
                 }else{
                     ?>
                         <header>
-                            <h1>Welcome to Leonie access client site!</h1>
-                            <p>Scan QR code on Leonies screen with your mobile device to become access!</p>
+                            <h1>Welcome to <?php echo $settingV[array_search('scitosName', $settingN)]; ?> access client site!</h1>
+                            <p>Scan QR code on the screen of <?php echo $settingV[array_search('scitosName', $settingN)]; ?> with your mobile device to become access!</p>
                         </header>
 
                     <?php
@@ -63,13 +82,9 @@
             ?>
              
   	
-            <header id="KeyInvalidMessage">
-                <h1>Your Key is not valid!</h1>
-                <p>Scan QR code on Leonies screen with your mobile device to become access!</p>
+            <header id="invalidMessage">
+                
             </header>
         
     </body>
-    <script type="text/javascript">
-        setRequest(0, 0); //Damit die Elemente verschwinden, wenn Key ungültig!
-        </script>
 </html>

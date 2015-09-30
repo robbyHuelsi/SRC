@@ -1,47 +1,61 @@
 <!DOCTYPE html>
 <html lang="de">
+<?php
+	$settingsFile = "settings.txt";
+	$sfh = fopen($settingsFile, 'r');
+	if ($sfh) {
+		while (($buffer = fgets($sfh, 4096)) !== false) {
+			list($settingN[], $settingV[]) = split('[=;]', $buffer);
+		}
+		if (!feof($sfh)) {
+			echo "Fehler!";
+		}
+		fclose($sfh);
+	}
+?>
+
     <head>
         <meta charset="utf-8">
 
         <link rel="stylesheet" href="style/server.css">
+        <link rel="stylesheet" href="style/notification.css">
+        <link rel="stylesheet" href="font-awesome-4-4-0/css/font-awesome.min.css">
 
-        <title>Leonie Server</title>
+        <script language="javascript" type="text/javascript" src="script/server.js"></script>
+        <script language="javascript" type="text/javascript" src="script/notification.js"></script>
+
+        <title><?php echo $settingV[array_search('scitosName', $settingN)]; ?> Remote Control Server</title>
     </head>
 
-    <body>
+    <body onload="loadServer('<?php echo $settingV[array_search('scitosName', $settingN)]; ?>', '<?php echo $settingV[array_search('port', $settingN)]; ?>', '<?php echo $settingV[array_search('path', $settingN)]; ?>');">
 
     	<header>
-    		<h1>Welcome to Leonie access server!</h1>
+    		<h1>Welcome to <?php echo $settingV[array_search('scitosName', $settingN)]; ?> access server!</h1>
     		<p>Open URL width your Smartphone by using the QR code:</p>
     	</header>
+		
+    	<table id="mainTable">
+    		<td id="tdQr">
+    			<div id='qrImgDiv' onclick="toggleInfo();"></div>		
+    		</td>
+    		<td id="tdInfo">
+    			<div id="infoDiv">
+					<table id="clientsTable">
+					<caption>Clients:</caption>
+    					<thead>
+    						<td></td>
+    						<td>Name</td>
+    						<td>IP</td>
+    						<td>Key</td>
+    						<td></td>
+    					</thead>
+    					<tbody></tbody>
+    				</table>
+       			</div>
+    		</td>
+    	</table>
 
-	<?php
-		include "qr/qrlib.php";
-
-		header('Content-Type: text/html; charset=utf-8'); // sorgt für die korrekte Kodierung
-		header('Cache-Control: must-revalidate, pre-check=0, no-store, no-cache, max-age=0, post-check=0'); // ist mal wieder wichtig wegen IE
-
-		$seed = str_split('abcdefghijklmnopqrstuvwxyz'
-                     .'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-                     .'0123456789'); // and any other characters
-    	shuffle($seed); // probably optional since array_is randomized; this may be redundant
-    	$key = '';
-    	foreach (array_rand($seed, 50) as $k) $key .= $seed[$k];
- 
-		$myFile = "key.txt";
-		$fh = fopen($myFile, 'w');
-		fwrite($fh,$key);
-		fclose($fh);
-
-		$url = "http://".getHostByName(getHostName())."/client.php?key=".$key;
-
-		// create a QR Code with this text and display it
-		QRcode::png($url, "urlQr.png", "L", 10, 10);
-
-		echo "<div id='qrImg'><img src='urlQr.png'></div>";
-
-		echo "<p id='url'><a href='".$url."'>".$url."</a></p>";
-	?>
+		
 
 	</body>
 </html>
