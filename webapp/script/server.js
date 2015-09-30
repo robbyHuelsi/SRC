@@ -1,17 +1,21 @@
 var request = false;
-var scitosName, port, path;
+var scitosName, port, path, showHint;
 
 var reqAnswer;
 
 var showInfo = false;
 
 
-function loadServer(getScitosName, getPort, getPath){
+function loadServer(getScitosName, getPort, getPath, getShowHint){
 	scitosName = getScitosName;
 	port = getPort;
 	path = getPath;
-	repeatRequest();
+	showHint = (getShowHint == "true"?true:false);
 
+	if (showHint) {
+		notification("Hint","If you want to manage clients click on the qr code!","hint")
+	};
+	repeatRequest();
 };
 
 function repeatRequest(){

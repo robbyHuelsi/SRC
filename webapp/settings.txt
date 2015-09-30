@@ -1,3 +1,6 @@
 scitosName=Leonie;	//Semicolon essential
 port=8888;		//If not necessary keep empty
-path=/RemoteControl/webapp;			//Example: /path/example
+path=;			//Example: /path/example
+showHint=true;		//true or false
+			
+//After edit settings here,you have to reload server site. By editing port and path in addition you must reload qr code on server site.

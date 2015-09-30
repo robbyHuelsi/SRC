@@ -27,7 +27,7 @@
         <title><?php echo $settingV[array_search('scitosName', $settingN)]; ?> Remote Control Server</title>
     </head>
 
-    <body onload="loadServer('<?php echo $settingV[array_search('scitosName', $settingN)]; ?>', '<?php echo $settingV[array_search('port', $settingN)]; ?>', '<?php echo $settingV[array_search('path', $settingN)]; ?>');">
+    <body onload="loadServer('<?php echo $settingV[array_search('scitosName', $settingN)]; ?>', '<?php echo $settingV[array_search('port', $settingN)]; ?>', '<?php echo $settingV[array_search('path', $settingN)]; ?>', '<?php echo $settingV[array_search('showHint', $settingN)]; ?>');">
 
     	<header>
     		<h1>Welcome to <?php echo $settingV[array_search('scitosName', $settingN)]; ?> access server!</h1>

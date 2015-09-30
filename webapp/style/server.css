@@ -53,7 +53,7 @@ header{
 
 	background-image: url("../urlQr.png");
 	background-position: 50%;
-	background-size: 150%;
+	background-size: 140%;
 
 	transition: background-image 1s;
 	-ms-transition: background-image 1s;

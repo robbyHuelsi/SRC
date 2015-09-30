@@ -1,10 +1,14 @@
 function notification(title, text, kind) {
 	//console.log(icon);
-	var color = "", icon = "";
+	var color = "", icon = "", dur = 2500;
 
 	if (kind == "warning") {
-		color = "red";
+		color = "#b41e14";
 		icon = "warning";
+	}else if (kind == "hint"){
+		color = "#00a014";
+		icon = "hand-peace-o";
+		dur = 4000;
 	}else if (kind == "welcome"){
 		icon = "hand-peace-o";
 	}else if (kind == "control") {
@@ -35,10 +39,10 @@ function notification(title, text, kind) {
 
 	setTimeout(function() {
 		noti.style.top = (-1 * noti.offsetHeight) + "px";
-	}, 2520);
+	}, dur + 20);
 
 	setTimeout(function() {
 		noti.parentNode.removeChild(noti);
-	}, 3520);
+	}, dur + 1020);
 
 }
