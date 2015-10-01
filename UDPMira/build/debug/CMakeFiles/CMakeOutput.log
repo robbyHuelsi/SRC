@@ -28,16 +28,16 @@ The CXX compiler identification is GNU, found in "/home/leonie/MIRA-Projects/Rem
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec2567118231/fast"
+Run Build Command:/usr/bin/make "cmTryCompileExec4158424711/fast"
 make[1]: Entering directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec2567118231.dir/build.make CMakeFiles/cmTryCompileExec2567118231.dir/build
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4158424711.dir/build.make CMakeFiles/cmTryCompileExec4158424711.dir/build
 make[2]: Entering directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec2567118231.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2567118231.dir/testCCompiler.c.o   -c /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTryCompileExec2567118231
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2567118231.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTryCompileExec2567118231.dir/testCCompiler.c.o  -o cmTryCompileExec2567118231 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec4158424711.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec4158424711.dir/testCCompiler.c.o   -c /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTryCompileExec4158424711
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4158424711.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec4158424711.dir/testCCompiler.c.o  -o cmTryCompileExec4158424711 -rdynamic 
 make[2]: Leaving directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp'
 
@@ -45,16 +45,16 @@ make[1]: Leaving directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/bui
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec1774502383/fast"
+Run Build Command:/usr/bin/make "cmTryCompileExec3183186410/fast"
 make[1]: Entering directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec1774502383.dir/build.make CMakeFiles/cmTryCompileExec1774502383.dir/build
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3183186410.dir/build.make CMakeFiles/cmTryCompileExec3183186410.dir/build
 make[2]: Entering directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec1774502383.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1774502383.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c
-Linking C executable cmTryCompileExec1774502383
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1774502383.dir/link.txt --verbose=1
-/usr/bin/cc     -v CMakeFiles/cmTryCompileExec1774502383.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec1774502383 -rdynamic  
+Building C object CMakeFiles/cmTryCompileExec3183186410.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3183186410.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec3183186410
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3183186410.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTryCompileExec3183186410.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec3183186410 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.8/lto-wrapper
@@ -64,8 +64,8 @@ Thread model: posix
 gcc version 4.8.4 (Ubuntu 4.8.4-2ubuntu1~14.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec1774502383' '-rdynamic' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec1774502383 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec1774502383.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec3183186410' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec3183186410 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec3183186410.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
 make[2]: Leaving directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp'
 
@@ -74,16 +74,16 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec1774502383/fast"]
+  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec3183186410/fast"]
   ignore line: [make[1]: Entering directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp']
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec1774502383.dir/build.make CMakeFiles/cmTryCompileExec1774502383.dir/build]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec3183186410.dir/build.make CMakeFiles/cmTryCompileExec3183186410.dir/build]
   ignore line: [make[2]: Entering directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp']
   ignore line: [/usr/bin/cmake -E cmake_progress_report /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp/CMakeFiles 1]
-  ignore line: [Building C object CMakeFiles/cmTryCompileExec1774502383.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1774502383.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTryCompileExec1774502383]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1774502383.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTryCompileExec1774502383.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec1774502383 -rdynamic  ]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec3183186410.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3183186410.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTryCompileExec3183186410]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3183186410.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTryCompileExec3183186410.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec3183186410 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.8/lto-wrapper]
@@ -93,8 +93,8 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 4.8.4 (Ubuntu 4.8.4-2ubuntu1~14.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec1774502383' '-rdynamic' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec1774502383 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec1774502383.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec3183186410' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec3183186410 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec3183186410.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/collect2] ==> ignore
     arg [--sysroot=/] ==> ignore
     arg [--build-id] ==> ignore
@@ -108,7 +108,7 @@ Parsed C implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTryCompileExec1774502383] ==> ignore
+    arg [cmTryCompileExec3183186410] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o] ==> ignore
@@ -120,7 +120,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../..]
-    arg [CMakeFiles/cmTryCompileExec1774502383.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTryCompileExec3183186410.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -152,16 +152,16 @@ Parsed C implicit link information from above output:
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec628703671/fast"
+Run Build Command:/usr/bin/make "cmTryCompileExec3143096769/fast"
 make[1]: Entering directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec628703671.dir/build.make CMakeFiles/cmTryCompileExec628703671.dir/build
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3143096769.dir/build.make CMakeFiles/cmTryCompileExec3143096769.dir/build
 make[2]: Entering directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec628703671.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTryCompileExec628703671.dir/testCXXCompiler.cxx.o -c /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTryCompileExec628703671
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec628703671.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTryCompileExec628703671.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec628703671 -rdynamic 
+Building CXX object CMakeFiles/cmTryCompileExec3143096769.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec3143096769.dir/testCXXCompiler.cxx.o -c /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTryCompileExec3143096769
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3143096769.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTryCompileExec3143096769.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec3143096769 -rdynamic 
 make[2]: Leaving directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp'
 
@@ -169,16 +169,16 @@ make[1]: Leaving directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/bui
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec2648648371/fast"
+Run Build Command:/usr/bin/make "cmTryCompileExec2558958629/fast"
 make[1]: Entering directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec2648648371.dir/build.make CMakeFiles/cmTryCompileExec2648648371.dir/build
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2558958629.dir/build.make CMakeFiles/cmTryCompileExec2558958629.dir/build
 make[2]: Entering directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec2648648371.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTryCompileExec2648648371.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTryCompileExec2648648371
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2648648371.dir/link.txt --verbose=1
-/usr/bin/c++      -v CMakeFiles/cmTryCompileExec2648648371.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec2648648371 -rdynamic  
+Building CXX object CMakeFiles/cmTryCompileExec2558958629.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec2558958629.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTryCompileExec2558958629
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2558958629.dir/link.txt --verbose=1
+/usr/bin/c++      -v CMakeFiles/cmTryCompileExec2558958629.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec2558958629 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.8/lto-wrapper
@@ -188,8 +188,8 @@ Thread model: posix
 gcc version 4.8.4 (Ubuntu 4.8.4-2ubuntu1~14.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2648648371' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec2648648371 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec2648648371.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2558958629' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec2558958629 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec2558958629.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
 make[2]: Leaving directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp'
 
@@ -198,16 +198,16 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec2648648371/fast"]
+  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec2558958629/fast"]
   ignore line: [make[1]: Entering directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp']
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec2648648371.dir/build.make CMakeFiles/cmTryCompileExec2648648371.dir/build]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec2558958629.dir/build.make CMakeFiles/cmTryCompileExec2558958629.dir/build]
   ignore line: [make[2]: Entering directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp']
   ignore line: [/usr/bin/cmake -E cmake_progress_report /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp/CMakeFiles 1]
-  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec2648648371.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTryCompileExec2648648371.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTryCompileExec2648648371]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2648648371.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTryCompileExec2648648371.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec2648648371 -rdynamic  ]
+  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec2558958629.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTryCompileExec2558958629.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTryCompileExec2558958629]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2558958629.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTryCompileExec2558958629.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec2558958629 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.8/lto-wrapper]
@@ -217,8 +217,8 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 4.8.4 (Ubuntu 4.8.4-2ubuntu1~14.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2648648371' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec2648648371 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec2648648371.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2558958629' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec2558958629 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec2558958629.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/collect2] ==> ignore
     arg [--sysroot=/] ==> ignore
     arg [--build-id] ==> ignore
@@ -232,7 +232,7 @@ Parsed CXX implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTryCompileExec2648648371] ==> ignore
+    arg [cmTryCompileExec2558958629] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o] ==> ignore
@@ -244,7 +244,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../..]
-    arg [CMakeFiles/cmTryCompileExec2648648371.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTryCompileExec2558958629.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -274,16 +274,16 @@ Parsed CXX implicit link information from above output:
 Determining if files pthread.h exist passed with the following output:
 Change Dir: /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec1171982092/fast"
+Run Build Command:/usr/bin/make "cmTryCompileExec2942944785/fast"
 make[1]: Entering directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec1171982092.dir/build.make CMakeFiles/cmTryCompileExec1171982092.dir/build
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2942944785.dir/build.make CMakeFiles/cmTryCompileExec2942944785.dir/build
 make[2]: Entering directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec1171982092.dir/CheckIncludeFiles.c.o
-/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1171982092.dir/CheckIncludeFiles.c.o   -c /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
-Linking C executable cmTryCompileExec1171982092
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1171982092.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTryCompileExec1171982092.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec1171982092 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec2942944785.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2942944785.dir/CheckIncludeFiles.c.o   -c /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec2942944785
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2942944785.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2942944785.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec2942944785 -rdynamic 
 make[2]: Leaving directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp'
 
@@ -291,16 +291,16 @@ make[1]: Leaving directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/bui
 Determining if the function pthread_create exists in the pthread passed with the following output:
 Change Dir: /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec241889200/fast"
+Run Build Command:/usr/bin/make "cmTryCompileExec3108744846/fast"
 make[1]: Entering directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec241889200.dir/build.make CMakeFiles/cmTryCompileExec241889200.dir/build
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3108744846.dir/build.make CMakeFiles/cmTryCompileExec3108744846.dir/build
 make[2]: Entering directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec241889200.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec241889200.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec241889200
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec241889200.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec241889200.dir/CheckFunctionExists.c.o  -o cmTryCompileExec241889200 -rdynamic -lpthread 
+Building C object CMakeFiles/cmTryCompileExec3108744846.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec3108744846.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3108744846
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3108744846.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec3108744846.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3108744846 -rdynamic -lpthread 
 make[2]: Leaving directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory `/home/leonie/MIRA-Projects/RemoteControl/UDPMira/build/debug/CMakeFiles/CMakeTmp'
 

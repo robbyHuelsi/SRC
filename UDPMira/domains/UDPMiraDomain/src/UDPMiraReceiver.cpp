@@ -112,7 +112,7 @@ void UDPMiraReceiver::initialize()
 	// TODO: subscribe and publish all required channels
 	//subscribe<Pose2>("Pose", &UnitName::onPoseChanged);
 	//mChannel = publish<Img<>>("Image");
-	server = new udp_server("134.103.107.164", 8888);
+	server = new udp_server("192.168.1.7", 8888);
 }
 
 void UDPMiraReceiver::process(const Timer& timer)
@@ -133,7 +133,7 @@ void UDPMiraReceiver::process(const Timer& timer)
 	Velocity2 vel;
 
 	
-        server->recv(msg, BUFLEN); //Beispiel: x=123 y=-123\0
+        server->recv(msg, BUFLEN); //Beispiel: x=12 y=-100\0
 	line = msg;
 	cout << line << endl;
 
@@ -143,7 +143,7 @@ void UDPMiraReceiver::process(const Timer& timer)
 		pos = cmd.find('=');
 		cmds[0][i] = cmd.substr(0,pos);
 		cmds[1][i] = cmd.substr(pos+1,cmd.length());
-		//cout << cmds[0][i] << ": " << cmds[1][i] << ";" << endl;
+		cout << cmds[0][i] << ": " << cmds[1][i] << ";" << endl;
         	++i;
     	}
 
