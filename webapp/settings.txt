@@ -1,5 +1,5 @@
 scitosName=Leonie;	//Semicolon essential
-port=8888;		//If not necessary keep empty
+port=80;		//If not necessary keep empty
 path=;			//Example: /path/example
 showHint=true;		//true or false
 			

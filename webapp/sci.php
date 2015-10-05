@@ -12,6 +12,7 @@
 	$changeFile = false;
 	$reqCase = -1;
 
+
 	$clientFile = "clients.txt";
 	$logFile = "log.txt";
 
@@ -212,12 +213,13 @@
 	}
 
 	function udp($posX, $posY){
+
 		$sock = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP);
 
-	    $msg = $posX.",".$posY.",";
+	    $msg = "x=".$posX." y=".$posY."\0";
 	    $len = strlen($msg);
 
-	    socket_sendto($sock, $msg, $len, 0, '127.0.0.1', 1223);
+	    socket_sendto($sock, $msg, $len, 0, '134.103.108.15', 8888);
 	    socket_close($sock);
 	}
 
