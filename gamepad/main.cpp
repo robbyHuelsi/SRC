@@ -21,7 +21,7 @@ using namespace udp_client_server;
 
 void *timer(void *a)
 {
-   udp_client client("192.168.1.7", 8888);  //134.103.120.168:888
+   udp_client client("134.103.108.15", 8888);  //134.103.120.168:888
     while (timeraktiv){
         while (aktiv) {
             client.send(str,BUFLEN);
@@ -38,6 +38,8 @@ int main(void)
     	int done = 0;
     	int achse_X=0;
     	int achse_Y=0;
+        int reset = 0;
+        int emer = 0;
 
 
         struct js_event jse;
@@ -55,21 +57,30 @@ int main(void)
 
             if (rc == 1) {
                 aktiv = 1;
-                //printf("Event: time %8u, value %8hd, type: %3u, axis/button: %u\n",
-                    //jse.time, jse.value, jse.type, jse.number);
+                printf("Event: time %8u, value %8hd, type: %3u, axis/button: %u\n",
+                    jse.time, jse.value, jse.type, jse.number);
                 if (jse.type==2){
                 	switch (jse.number){
                 	case 2: achse_X = jse.value * 0.003051851;
                 		break;
-                	case 3: achse_Y = jse.value * 0.003051851;
+                    case 3: achse_Y = jse.value * -0.003051851;
                 		break;
                 	}
-                    sprintf(str, "x=%d,y=%d,",achse_X,achse_Y);
+                }else if(jse.type==1){
+                    switch (jse.number){
+                    case 1: reset = jse.value;
+                        break;
+                    case 2: emer = jse.value;
+                        break;
+                    }
+                }
+
+                    sprintf(str, "x=%d y=%d r=%d n=%d",achse_X,achse_Y,reset,emer);
                     printf("%s \n",str);
 
                     //client.send(str,BUFLEN);
 
-                }
+
 
             }
         }

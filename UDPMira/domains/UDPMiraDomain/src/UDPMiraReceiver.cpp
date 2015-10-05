@@ -102,17 +102,19 @@ private:
 
 ///////////////////////////////////////////////////////////////////////////////
 
-UDPMiraReceiver::UDPMiraReceiver() : Unit(Duration::milliseconds(250))
+UDPMiraReceiver::UDPMiraReceiver() : Unit(Duration::milliseconds(500))
 {
 	// TODO: further initialization of members, etc.
 }
 
 void UDPMiraReceiver::initialize()
 {
+printf("134.103.108.15");
 	// TODO: subscribe and publish all required channels
 	//subscribe<Pose2>("Pose", &UnitName::onPoseChanged);
 	//mChannel = publish<Img<>>("Image");
-	server = new udp_server("192.168.1.7", 8888);
+	server = new udp_server("134.103.108.15", 8888);
+	printf("134.103.108.15");
 }
 
 void UDPMiraReceiver::process(const Timer& timer)
@@ -127,6 +129,8 @@ void UDPMiraReceiver::process(const Timer& timer)
 
 	int i = 0;
 	int pos = 0;
+        int reset = 0;
+        int emer;
 	
 	float dX, dY;
 
@@ -151,17 +155,31 @@ void UDPMiraReceiver::process(const Timer& timer)
     	for(i = 0; i < 5; i++){
 		if (!cmds[0][i].compare("x")){
 			dX = (float)atoi(cmds[1][i].c_str()) / 100;
+			dX = dX * dX * dX;
 		}else if(!cmds[0][i].compare("y")){
 			dY = (float)atoi(cmds[1][i].c_str()) / 100;
-		}
+			dY = dY * dY * dY;
+                }else if(!cmds[0][i].compare("r")){
+                    reset = (int)atoi(cmds[1][i].c_str());
+                }else if(!cmds[0][i].compare("n")){
+                    emer = (int)atoi(cmds[1][i].c_str());
+                }
     	}
 
 	cout << "x: " << dX << ";" << endl;
 	cout << "y: " << dY << ";" << endl;
+        cout << "r: " << reset << ";" << endl;
+        cout << "n: " <<  emer << ";" << endl;
 
 	vel = {dY, 0, -dX};	
-
+        if (emer ==1){
+            callService<void>("robot/Robot", "emergencyStop");
+        }else{
 	callService<void>("robot/Robot", "setVelocity", vel);
+        if (reset==1) callService<void>("robot/Robot", "resetMotorStop");
+        }
+
+
 }
 
 ///////////////////////////////////////////////////////////////////////////////

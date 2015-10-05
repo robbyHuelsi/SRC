@@ -2,15 +2,15 @@
 <root>
   <InitialPose>
     <!--The translational part of the transform-->
-    <X>39.5106239319</X>
+    <X>-1.00659179688</X>
     <!--The translational part of the transform-->
-    <Y>24.9178142548</Y>
+    <Y>-33.2482376099</Y>
     <!--The orientation in degrees-->
-    <Phi>112.62802124</Phi>
+    <Phi>160.171615601</Phi>
     <!--The covariance matrix-->
-    <Cov>[     15.79,      1.126, -0.0005045;
-      1.126,      22.02, -0.0003392;
- -0.0005045, -0.0003392,    0.06079]</Cov>
+    <Cov>[  63.93,   -38.8,    1.76;
+   -38.8,   31.35,  -1.165;
+    1.76,  -1.165, 0.04999]</Cov>
   </InitialPose>
-  <Date>1443703695340384000</Date>
+  <Date>1444040027754703000</Date>
 </root>
