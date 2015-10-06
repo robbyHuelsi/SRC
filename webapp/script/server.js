@@ -1,13 +1,15 @@
 var request = false;
-var scitosName, port, path, showHint;
+var scitosName, scitosIP, scitosPath, port, path, showHint;
 
 var reqAnswer;
 
 var showInfo = false;
 
 
-function loadServer(getScitosName, getPort, getPath, getShowHint){
+function loadServer(getScitosName, getScitosIP, getScitosPort, getPort, getPath, getShowHint){
 	scitosName = getScitosName;
+	scitosIP = getScitosIP;
+	scitosPort = getScitosPort;
 	port = getPort;
 	path = getPath;
 	showHint = (getShowHint == "true"?true:false);
@@ -62,7 +64,7 @@ function keyRequest(command) {
 		// Requestheader senden
 		request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 		// Request senden
-		request.send('newKey='+newKey+'&removeClient='+removeClient+'&port='+port+'&path='+path);
+		request.send('newKey='+newKey+'&removeClient='+removeClient+'&serverPort='+port+'&serverPath='+path);
 		// Request auswerten
 		request.onreadystatechange = interpretRequest;
 	}
@@ -77,7 +79,7 @@ function interpretRequest() {
 				notification("Der Request wurde abgeschlossen, ist aber nicht OK", "Fehler-Code: "+request.status, "warning");
 			} else {
 				var xmlDoc = request.responseXML;
-				//console.log(request.responseText);
+				console.log(request.responseText);
 				reqAnswer = {
 					rcurl : (xmlDoc.getElementsByTagName("rcurl")[0].firstChild ? xmlDoc.getElementsByTagName("rcurl")[0].firstChild.nodeValue : ""),
 					newUrl : (xmlDoc.getElementsByTagName("newUrl")[0].firstChild ? xmlDoc.getElementsByTagName("newUrl")[0].firstChild.nodeValue : ""),

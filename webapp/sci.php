@@ -219,7 +219,7 @@
 	    $msg = "x=".$posX." y=".$posY."\0";
 	    $len = strlen($msg);
 
-	    socket_sendto($sock, $msg, $len, 0, '134.103.108.15', 8888);
+	    socket_sendto($sock, $msg, $len, 0, $_POST['scitosIP'], $_POST['scitosPort']);
 	    socket_close($sock);
 	}
 
@@ -255,7 +255,7 @@
 				echo "<position>".$queuePos."</position>\n";
 				echo "<length>".$queueLen."</length>\n";
 			echo "</queue>";
-			echo "<scitosNote>".""."</scitosNote>\n";
+			echo "<scitosNote>".$_POST["scitosIP"].":".$_POST["scitosPort"]."</scitosNote>\n";
 		echo "</formatname>";
 
 	}

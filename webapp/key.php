@@ -58,7 +58,7 @@
 	    //<< creating key -- END
 
 
-		$url = "http://".getHostByName(getHostName()).":".$_POST['port'].$_POST['path']."/client.php?key=".$newKey;
+		$url = "http://".getHostByName(getHostName()).":".$_POST['serverPort'].$_POST['serverPath']."/client.php?key=".$newKey;
 
 		// create a QR Code with this text and display it
 		QRcode::png($url, "urlQr.png", "L", 10, 10);
@@ -81,7 +81,7 @@
 		//<< deleting -- END
 
 	}else{
-		$url = "http://".getHostByName(getHostName()).":".$_POST['port'].$_POST['path']."/client.php?key=".end($keys);
+		$url = "http://".getHostByName(getHostName()).":".$_POST['serverPort'].$_POST['serverPath']."/client.php?key=".end($keys);
 	};
 
 

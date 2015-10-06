@@ -40,7 +40,7 @@
         <title><?php echo $settingV[array_search('scitosName', $settingN)]; ?> Remote Control</title>
     </head>
 
-    <body onload="loadClient('<?php echo $key; ?>', '<?php echo $settingV[array_search('scitosName', $settingN)]; ?>', '<?php echo $settingV[array_search('port', $settingN)]; ?>', '<?php echo $settingV[array_search('path', $settingN)]; ?>');">
+    <body onload="loadClient('<?php echo $key; ?>', '<?php echo $settingV[array_search('scitosName', $settingN)]; ?>', '<?php echo $settingV[array_search('scitosIP', $settingN)]; ?>', '<?php echo $settingV[array_search('scitosPort', $settingN)]; ?>', '<?php echo $settingV[array_search('serverPort', $settingN)]; ?>', '<?php echo $settingV[array_search('serverPath', $settingN)]; ?>');">
         
             <?php
                 if ($key) {

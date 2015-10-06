@@ -6,17 +6,20 @@ var repeat = true;
 
 var reqAnswer = false;
 
-var lastRequest;
+var lastRequest, lastJoystickSent;
 
-var verificationKey, scitosName, port, path;
+var verificationKey, scitosName, scitosÍP, scitosPort, serverPort, serverPath;
 
 var notiCount = 0;
 
-function loadClient(getKey, getScitosName, getPort, getPath){
+function loadClient(getKey, getScitosName, getScitosIP, getScitosPort, getServerPort, getServerPath){
 	verificationKey = getKey;
 	scitosName = getScitosName;
-	port = getPort;
-	path = getPath;
+	scitosIP = getScitosIP;
+	scitosPort = getScitosPort;
+
+	serverPort = getServerPort;
+	serverPath = getServerPath;
 	//alert(GetComputerName());
 	repeatRequest();
 };
@@ -45,6 +48,7 @@ function getComputerName(){
 }
 
 function joystickChange(posX, posY){
+
 	if (posX == 0 && posY == 0) {
 		posX100 = 0;
 		posY100 = 0;
@@ -53,17 +57,19 @@ function joystickChange(posX, posY){
     	document.getElementById("infoMouseY").value = 0;
     	document.getElementById("joystick").style.left = "";
     	document.getElementById("joystick").style.top = "";
-
-    	setRequest("CONTROL", 0, 0);
     }else{
     	posX100 = Math.round((posX - $(joystickWrapper).offset().left - 2 - $(joystickWrapper).width()/2 +25) / ($(joystickWrapper).width()/2 - 25) * 100);
 		posY100 = Math.round(-(posY - $(joystickWrapper).offset().top - 2 - $(joystickWrapper).height()/2 + 25) / ($(joystickWrapper).height()/2 - 25) * 100);
 
     	document.getElementById("infoMouseX").value = (posX100);
     	document.getElementById("infoMouseY").value = (posY100);
-
-    	setRequest("CONTROL",posX100, posY100);
     };
+
+    if ((Date.now() - lastJoystickSent) > 249) {
+    	//setRequest("CONTROL",posX100, posY100);
+    };
+
+    lastJoystickSent = Date.now();
 };
 
 
@@ -161,7 +167,7 @@ function setRequest(status, MouseX, MouseY) {
 		// Requestheader senden
 		request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 		// Request senden
-		request.send('key='+verificationKey+'&time='+lastRequest+'&port='+port+'&path='+path+'&name='+getComputerName()+'&status='+status+'&x='+MouseX+'&y='+MouseY);
+		request.send('key='+verificationKey+'&time='+lastRequest+'&scitosIP='+scitosIP+'&scitosPort='+scitosPort+'&serverPort='+serverPort+'&serverPath='+serverPath+'&name='+getComputerName()+'&status='+status+'&x='+MouseX+'&y='+MouseY);
 		// Request auswerten
 		request.onreadystatechange = interpretRequest;
 	}
@@ -177,7 +183,7 @@ function interpretRequest() {
 				repeatTime = 3000;
 			} else {
 				var xmlDoc = request.responseXML;
-				//console.log(request.responseText);
+				console.log(request.responseText,"","");
 				reqAnswer = {
 					status : {
 						access : (xmlDoc.getElementsByTagName("status")[0].getElementsByTagName("access")[0].firstChild ? xmlDoc.getElementsByTagName("status")[0].getElementsByTagName("access")[0].firstChild.nodeValue : ""),
