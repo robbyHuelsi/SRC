@@ -21,8 +21,9 @@ MIRA_ADD_LIBRARY(UDPMiraReceiver
 	SHARED
 	#PACKAGE $PACKAGE$
 	SOURCE
-		src/UDPMiraReceiver.C
+		src/UDPMiraReceiver.cpp
 		src/udpclient.cpp
+		src/getlocalip.cpp
 
 	LINK_LIBS
 		MIRABase

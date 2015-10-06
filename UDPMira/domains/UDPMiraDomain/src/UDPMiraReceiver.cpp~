@@ -44,12 +44,23 @@
  * @date   2015/08/27
  */
 
-#include <fw/Unit.h>
 #include "udpclient.h"
+#include <fw/Unit.h>
 #include <string>
 #include <sstream>
 
 #include <transform/Velocity.h>
+
+//Additionaly includes for getting IP
+#include <cstdio>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <sys/ioctl.h>
+#include <netinet/in.h>
+#include <net/if.h>
+#include <arpa/inet.h>
+
 
 #define BUFLEN 1024
 
@@ -109,12 +120,31 @@ UDPMiraReceiver::UDPMiraReceiver() : Unit(Duration::milliseconds(500))
 
 void UDPMiraReceiver::initialize()
 {
-printf("134.103.108.15");
 	// TODO: subscribe and publish all required channels
 	//subscribe<Pose2>("Pose", &UnitName::onPoseChanged);
 	//mChannel = publish<Img<>>("Image");
-	server = new udp_server("134.103.108.15", 8888);
-	printf("134.103.108.15");
+
+	//Get IP address:
+	int fd;
+	 struct ifreq ifr;
+
+	 fd = socket(AF_INET, SOCK_DGRAM, 0);
+
+	 /* I want to get an IPv4 IP address */
+	 ifr.ifr_addr.sa_family = AF_INET;
+
+	 /* I want IP address attached to "wlan0" */
+	 strncpy(ifr.ifr_name, "wlan0", IFNAMSIZ-1);
+
+	 ioctl(fd, SIOCGIFADDR, &ifr);
+
+	 close(fd);
+
+	 string ip = inet_ntoa(((struct sockaddr_in *)&ifr.ifr_addr)->sin_addr);
+	 cout << "IP adress of wlan0 is " << ip << "." << endl;
+
+
+	server = new udp_server(ip, 8888);
 }
 
 void UDPMiraReceiver::process(const Timer& timer)
